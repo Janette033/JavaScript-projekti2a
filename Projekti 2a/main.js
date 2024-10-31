@@ -19,7 +19,7 @@ function etsiTeattereita() {
                 theaterSelect.appendChild(vaihtoehto); // Laitetaan vaihtoehdot pudotusvalikkoon
             });
 
-            // Lisätään tapahtumakäsittelijä teatterivalitsimelle
+            // Lisätään tapahtumakuuntelija teatterivalitsimelle
             theaterSelect.addEventListener('change', etsiElokuvat);
         }
     };
