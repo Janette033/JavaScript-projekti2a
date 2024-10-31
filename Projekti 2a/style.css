@@ -1,0 +1,40 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+body {
+    background-image: url('../Projekti 2a/taustakuva.jpg'); 
+    background-size: cover; 
+}
+
+.movie-item {
+    background-color: rgb(34, 91, 145);
+}
+
+.p-2 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.border {
+    box-shadow: 0 0 10px white; 
+}
+
+
+h1 {
+    color: white;
+    font-family: fantasy;
+    margin-left: 88px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.col-lg-3,
+.col-md-3,
+.col-sm-12 {
+    margin: 5px; 
+    margin-left: 17px;
+    justify-content: center;
+}
+
