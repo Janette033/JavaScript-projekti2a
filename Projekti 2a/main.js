@@ -111,6 +111,7 @@ const searchInput = document.getElementById('searchInput');
 // Lisätään tapahtumakäsittelijä hakukentälle
 searchInput.addEventListener('keydown', function(event) { // Lisätään tapahtumakuuntelija
     if (event.key === 'Enter') { // Kun painetaan enteriä
+        event.preventDefault();
         etsiElokuvat(); // Kutsu elokuvien hakufunktiota
     }
 });
