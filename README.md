@@ -2,7 +2,7 @@
 Finnkino Elokuvainformaatio
 
 ## Demo link:
-https://bejewelled-cascaron-867541.netlify.app/ 
+https://ornate-sherbet-d441e4.netlify.app/
 
 ## How was the workload divided
 I did everything myself. 
