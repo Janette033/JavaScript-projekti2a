@@ -4,6 +4,8 @@ Finnkino Elokuvainformaatio
 ## Demo link:
 https://ornate-sherbet-d441e4.netlify.app/
 
+Note: If you open the link on a phone, the page title appears in a different font for some reason compared to on a computer.
+
 ## How was the workload divided
 I did everything myself. 
 
