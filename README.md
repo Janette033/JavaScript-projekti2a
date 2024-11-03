@@ -39,6 +39,14 @@ For example, when a user searches for a movie by name in the search field, the m
 More information could also be added to the movie details, as the application currently only shows the movie title, start time, and duration in minutes.
 
 ## Credits
+I used Bootstrap to style the page's search fields:
+https://bootsnipp.com/snippets/WMlMa  
+
+This video helped me make AJAX requests:
+Net Ninja. 2016. Asynchronous JavaScript #2 - AJAX Requests. YouTube. https://www.youtube.com/watch?v=h0ZUpPiV1ac 
+
+ChatGPT has helped in this project by finding errors in the code, 
+improving the code, and suggesting solutions for implementing certain functionalities.
 
 
 ## License
