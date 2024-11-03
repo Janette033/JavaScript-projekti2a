@@ -2,7 +2,7 @@
 Finnkino Elokuvainformaatio
 
 ## Demo link:
-The link to the website is currently not working.
+https://bejewelled-cascaron-867541.netlify.app/ 
 
 ## How was the workload divided
 I did everything myself. 
