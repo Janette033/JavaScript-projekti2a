@@ -1,4 +1,3 @@
-// Hakee teatterit Finnkinon API:sta ja täyttää pudotusvalikon
 function etsiTeattereita() {
     const xmlhttp = new XMLHttpRequest(); // Tallennetaan XMLHttpRequest-olio muuttujaan
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/TheatreAreas/", true); //Avataan open-metodilla, annetaan pyynnön tyyppi, URL-osoite ja asynkronisuusasetus, joka on true
@@ -80,35 +79,33 @@ function etsiElokuvat() {
 
 // Funktio elokuvien näyttämiseen
 function näytäElokuvat(elokuvat) {
-    const movieContainer = document.getElementById('movieContainer');
-    movieContainer.innerHTML = ""; // Tyhjennä aiemmat elokuvanäytöt
+    const elokuvaContainer = document.getElementById('elokuvaContainer');
+    elokuvaContainer.innerHTML = ""; // Tyhjennä aiemmat elokuvanäytöt
 
     // Luo uusi elokuvanäkymä jokaiselle elokuvalle
     elokuvat.forEach(movie => {
-        const movieDiv = document.createElement('div');
-        movieDiv.classList.add('movie-item', 'border', 'p-2', 'mb-3', 'd-flex', 'align-items-center'); // Käytetään valmiita Bootstrap luokkia tyylittelemään
-        movieDiv.innerHTML = `
-            <img src="${movie.imageUrl}" alt="${movie.title}" style="width: 100px; height: auto; margin-right: 20px;">
-            <div>
-                <h3>${movie.title}</h3>
-                <p>Näytöksen ajankohta: ${movie.startTime}</p>
-                <p>Kesto: ${movie.duration} minuuttia</p>
-            </div>
-        `;
-        movieContainer.appendChild(movieDiv); // Lisätään elokuvalaatikkoon
+        const elokuvaDiv = document.createElement('div');
+        elokuvaDiv.classList.add('movie-item', 'border', 'p-2', 'mb-3', 'd-flex', 'align-items-center'); // Käytetään valmiita Bootstrap luokkia tyylittelemään
+        elokuvaDiv.innerHTML = 
+            "<img src='" + movie.imageUrl + "' alt='" + movie.title + "' style='width: 100px; height: auto; margin-right: 20px;'>" +
+            "<div>" +
+                "<h3>" + movie.title + "</h3>" +
+                "<p>Näytöksen ajankohta: " + movie.startTime + "</p>" +
+                "<p>Kesto: " + movie.duration + " minuuttia</p>" +
+            "</div>";
+
+        elokuvaContainer.appendChild(elokuvaDiv); // Lisätään elokuvalaatikkoon
     });
 
     // Jos elokuvia ei löytynyt
     if (elokuvat.length === 0) {
-        movieContainer.innerHTML = "<p>Ei löytynyt elokuvia haun mukaan.</p>"; // Lisätään teksti sivulle
-        movieContainer.style.color = 'white'; // Aseta tekstin väri valkoiseksi
+        elokuvaContainer.innerHTML = "<p>Ei löytynyt elokuvia haun mukaan.</p>"; // Lisätään teksti sivulle
+        elokuvaContainer.style.color = 'white'; // Aseta tekstin väri valkoiseksi
     }
 }
 
 // Haetaan syöttökenttä
 const searchInput = document.getElementById('searchInput'); 
-
-// Lisätään tapahtumakäsittelijä hakukentälle
 searchInput.addEventListener('keydown', function(event) { // Lisätään tapahtumakuuntelija
     if (event.key === 'Enter') { // Kun painetaan enteriä
         event.preventDefault();
@@ -120,8 +117,10 @@ searchInput.addEventListener('keydown', function(event) { // Lisätään tapahtu
 function palauta() {
     document.getElementById('teatteriSelect').value = "1029"; // Palautetaan ID avulla takaisin "valitse alue/teatteri"
     document.getElementById('searchInput').value = ""; // Tyhjennetään hakukenttä
-    document.getElementById('movieContainer').innerHTML = ""; // Tyhjennetään elokuvat
+    document.getElementById('elokuvaContainer').innerHTML = ""; // Tyhjennetään elokuvat
 }
+
+
 
 
 
